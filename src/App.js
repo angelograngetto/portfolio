@@ -1,5 +1,6 @@
 import {Route, Switch} from 'wouter'
 import Navbar from './components/Navbar';
+import Footer from './components/Footer'
 import Home from './pages/home';
 import NotFound from './pages/NotFound';
 import Project from './pages/Project';
@@ -21,6 +22,7 @@ function App() {
               <NotFound/>
           </Route>
         </Switch>
+        <Footer/>
     </div>
   );
 }

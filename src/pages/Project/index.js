@@ -15,8 +15,8 @@ export default function Project({params}){
             </Helmet>
             <div className="project">
                 <h1>{title}</h1>
-                <a href={demo} rel='noreferrer' target='_blank'><i class="fas fa-globe"></i>Demo</a>
-                <a href={github} rel='noreferrer' target='_blank'><i class="fab fa-github"></i>GitHub</a>
+                <a href={demo} rel='noreferrer' target='_blank'><i className="fas fa-globe"></i>Visit site</a>
+                <a href={github} rel='noreferrer' target='_blank'><i className="fab fa-github"></i>GitHub</a>
                 <p>{large_description}</p>
                 <h3>Technologies used</h3>
                 <p>{technologies}</p>
