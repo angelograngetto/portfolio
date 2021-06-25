@@ -1,10 +1,10 @@
-
-export default function About(){
+import { withNamespaces } from 'react-i18next';
+function About({t}){
     return(
         <div className="about" id="about">
-            <h2>ABOUT ME</h2>
-            <p> I'm from Argentina and i'm a <b>fullstack developer</b>. I love the technology so that i dedicate myself to programming solutions for people and businness. I'm autodidact and i have different courses of programming. I can manage the frontend and backend of your site web with the best technologies at the moment. I have jobs done where my clients were happy for the results. Can you see my works more down of the page!</p>
-            <h4>Technologies</h4>
+            <h2>{t('about_title')}</h2>
+            <p>{t('about_p')}</p>
+            <h4>{t('about_tech')}</h4>
             <div className="technologies">
                 <i title="JavaScript" className="fab fa-js-square"></i>
                 <i title="React" className="fab fa-react"></i>
@@ -16,3 +16,4 @@ export default function About(){
         </div>
     )
 }
+export default withNamespaces()(About);

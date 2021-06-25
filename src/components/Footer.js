@@ -1,8 +1,10 @@
-
-export default function Footer(){
+import { withNamespaces } from "react-i18next"
+function Footer({t}){
     return(
         <footer>
-            <p>"Whatever you do, do it with passion."</p>
+            <p>"{t('footer')}"</p>
         </footer>
     )
 }
+
+export default withNamespaces()(Footer);

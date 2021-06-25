@@ -1,0 +1,27 @@
+{
+    "welcome": "Hola, soy Angelo",
+    "welcome_fullstack": "Desarrollador Fullstack",
+    "download_cv": "DESCARGAR CV",
+    "navbar_home": "Inicio",
+    "navbar_about": "Sobre mí",
+    "navbar_projects": "Proyectos",
+    "navbar_contact": "Contacto",
+    "about_title": "SOBRE MI",
+    "about_p": "Soy de Argentina y soy un desarrollador Fullstack. Amo la tecnología así que me dedico a programar soluciones. Soy autodidacta y he hecho diferentes cursos de programación. Puedo manejar tanto el frontend como el backend de una aplicación web con las mejores tecnologías del momento. Puedes ver mis trabajos más abajo.",
+    "about_tech": "Tecnologías",
+    "projects_title": "Proyectos",
+    "projects_visit_site": "Visitar sitio",
+    "projects_tech": "Tecnologías usadas",
+    "contact_title": "CONTACTO",
+    "contact_p": "Escríbeme y hablemos",
+    "contact_your_name": "Tu nombre",
+    "contact_your_email": "Tu email",
+    "contact_your_message": "Tu mensaje",
+    "contact_write_a_message": "Escríbeme un mensaje aquí",
+    "contact_send": "Enviar",
+    "footer": "Todo lo que hagas, hazlo con pasión.",
+    "notfound": "404 No se encontró",
+    "notfound_dont_worry": "No te preocupes",
+    "notfound_go_home": "Ir al inicio"
+
+}

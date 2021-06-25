@@ -1,7 +1,7 @@
 import {useState} from 'react'
-import {Link} from 'wouter'
+import { withNamespaces } from 'react-i18next';
 
-export default function Navbar(){
+function Navbar({t}){
 
     const [active, setActive] = useState(false)
 
@@ -10,10 +10,10 @@ export default function Navbar(){
             <button onClick={()=> setActive(true)} className={`btn__menu`}><i className="fas fa-bars"></i></button>
             <button onClick={()=> setActive(false)} className={`btn__menu-close  ${active ? 'active' : ''}`}><i className="fas fa-times"></i></button>
             <ul className="navbar__menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="/">{t('navbar_home')}</a></li>
+                <li><a href="#about">{t('navbar_about')}</a></li>
+                <li><a href="#projects">{t('navbar_projects')}</a></li>
+                <li><a href="#contact">{t('navbar_contact')}</a></li>
             </ul>
             <ul className="navbar__social">
                 <li><a title="Linkedin" href="https://linkedin.com/in/angelo-grangetto"><i className="fab fa-linkedin"></i></a></li>
@@ -21,11 +21,13 @@ export default function Navbar(){
             </ul>
 
             <ul className={`navbar__menu-responsive  ${active ? 'active' : ''}`}>
-                <li><a onClick={()=> setActive(false)} href="/">Home</a></li>
-                <li><a onClick={()=> setActive(false)} href="#about">About</a></li>
-                <li><a onClick={()=> setActive(false)} href="#projects">Projects</a></li>
-                <li><a onClick={()=> setActive(false)} href="#contact">Contact</a></li>
+                <li><a onClick={()=> setActive(false)} href="/">{t('navbar_home')}</a></li>
+                <li><a onClick={()=> setActive(false)} href="#about">{t('navbar_about')}</a></li>
+                <li><a onClick={()=> setActive(false)} href="#projects">{t('navbar_projects')}</a></li>
+                <li><a onClick={()=> setActive(false)} href="#contact">{t('navbar_contact')}</a></li>
             </ul>
         </nav>
         )
 }
+
+export default withNamespaces()(Navbar);

@@ -1,6 +1,7 @@
 import {Link} from 'wouter'
 import {Helmet} from 'react-helmet'
-export default function NotFound(){
+import { withNamespaces } from 'react-i18next'
+function NotFound({t}){
     return(
         <div className="container">     
             <Helmet>
@@ -9,10 +10,12 @@ export default function NotFound(){
             </Helmet>
             <div className="notfound">
                 <h1>¡Oops!</h1>
-                <p>404 Not Found</p>
-                <p>Don't worry</p>
-                <Link to="/">Go home</Link>
+                <p>{t('notfound')}</p>
+                <p>{t('notfound_dont_worry')}</p>
+                <Link to="/">{t('notfound_go_home')}</Link>
             </div>
         </div>
     )
 }
+
+export default withNamespaces()(NotFound);

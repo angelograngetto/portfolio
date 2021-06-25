@@ -235,15 +235,12 @@ b{
 
     .translate{
         position: absolute;
-        bottom: 0;
-        top: 0;
+        top: 5rem;
+        left: 0;
         display: flex;
         flex-direction: row;
         margin: 1rem 0;
-        p{
-            color: $grey;
-            font-style: italic;
-        }
+        z-index: 2;
         button{
             border: none;
             background: none;

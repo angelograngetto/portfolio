@@ -1,10 +1,10 @@
 import ProjectCard from "./ProjectCard";
 import listprojects from "../listprojects";
-
-export default function Projects(){
+import { withNamespaces } from 'react-i18next';
+function Projects({t}){
     return(
         <div className="projects" id="projects">
-            <h2>Projects</h2>
+            <h2>{t('projects_title')}</h2>
             <div>
                 {listprojects.map(project => (
                     <ProjectCard 
@@ -20,3 +20,5 @@ export default function Projects(){
         </div>
     )
 }
+
+export default withNamespaces()(Projects);
