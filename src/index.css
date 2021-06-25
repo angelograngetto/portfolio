@@ -1,13 +1,579 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;700&family=Staatliches&display=swap");
 body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #111111;
+  color: white;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::-moz-selection {
+  background-color: #fb725b;
 }
+
+body::selection {
+  background-color: #fb725b;
+}
+
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+h4::-moz-selection,
+h5::-moz-selection,
+h6::-moz-selection,
+p::-moz-selection {
+  background-color: #fb725b;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection {
+  background-color: #fb725b;
+}
+
+b {
+  color: #fb725b;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 100rem;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 100rem;
+  background-color: transparent;
+  border-bottom: 0.3rem solid #181818;
+  height: 4rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  margin: auto;
+}
+
+.navbar__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  height: 40%;
+}
+
+.navbar__menu li a {
+  color: white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  margin: 0 2rem;
+  text-decoration: none;
+}
+
+.navbar__menu li a:hover {
+  color: #fb725b;
+  border-bottom: 0.2rem solid #fb725b;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar__menu {
+    display: none;
+  }
+}
+
+.navbar__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0 2rem 0 0;
+}
+
+.navbar__social li a {
+  color: white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar__social li a:hover {
+  color: #fb725b;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar__social {
+    margin: 0;
+  }
+}
+
+.navbar .btn__menu {
+  background: none;
+  border: none;
+  display: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar .btn__menu {
+    display: block;
+  }
+}
+
+.navbar .btn__menu-close {
+  position: absolute;
+  font-size: 2rem;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  color: white;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+.navbar .btn__menu-close.active {
+  display: block;
+  -webkit-animation: fadeIn 0.5s ease;
+          animation: fadeIn 0.5s ease;
+}
+
+.navbar__menu-responsive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #101010;
+  width: 100%;
+  height: 100vh;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  display: none;
+}
+
+.navbar__menu-responsive li {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.navbar__menu-responsive li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar__menu-responsive.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: fadeIn 0.5s ease;
+          animation: fadeIn 0.5s ease;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.home {
+  margin: auto;
+  min-height: calc(100vh - 4.5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  position: relative;
+}
+
+.home div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home div h1 {
+  color: #fb725b;
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 0 0 -1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .home div h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.home div p {
+  color: #fb725b;
+  margin: 0 0 1.5rem;
+}
+
+.home img {
+  width: 30%;
+  height: 30%;
+  display: block;
+  margin: 0 5rem;
+  border-radius: 50%;
+}
+
+.home a {
+  color: white;
+  text-decoration: none;
+  background-color: #fb725b;
+  width: auto;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 0.3rem;
+}
+
+.home a:hover {
+  opacity: 0.4;
+}
+
+.home .scroll-text {
+  position: absolute;
+  text-transform: uppercase;
+  right: -5%;
+  top: 40%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  opacity: 0.4;
+}
+
+.home .translate {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 1rem 0;
+}
+
+.home .translate p {
+  color: #292929;
+  font-style: italic;
+}
+
+.home .translate button {
+  border: none;
+  background: none;
+  color: #323232;
+  cursor: pointer;
+}
+
+.home .translate button.active {
+  color: #323232;
+  color: #989898;
+}
+
+h2 {
+  font-family: 'Staatliches', cursive;
+  font-size: 15rem;
+  opacity: 0.1;
+  margin-bottom: -2rem;
+  text-transform: uppercase;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 942px) {
+  h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.about {
+  margin: auto;
+}
+
+.about p {
+  width: 60%;
+}
+
+.about h4 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.about .technologies {
+  font-size: 3rem;
+}
+
+.about .technologies i {
+  margin: 0 2rem 0 0;
+}
+
+.about .technologies i:hover {
+  color: #fb725b;
+}
+
+.projects h2 {
+  text-align: right;
+}
+
+.projects div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.project_card {
+  display: block;
+  margin: 1rem auto;
+  width: 30rem;
+  border-radius: 1rem;
+  background-color: #292929;
+  position: relative;
+  overflow: hidden;
+}
+
+.project_card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0.1;
+}
+
+.project_card .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.project_card .info h4 {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 0.6rem;
+  line-height: 3rem;
+}
+
+.project_card .info p {
+  display: block;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.project_card .info:hover {
+  opacity: 0.5;
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+.contact form input, .contact form textarea {
+  background: none;
+  padding: 0.5rem;
+  border: 1px solid #292929;
+  color: white;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.contact form input:focus, .contact form textarea:focus {
+  outline: none;
+  border: 1px solid #fb725b;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form button {
+  display: block;
+  width: 40%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #fb725b;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.contact form button:hover {
+  opacity: 0.5;
+}
+
+.project h1 {
+  font-size: 15rem;
+  color: #fb725b;
+  margin: 0;
+  margin-bottom: -1rem;
+  line-height: 15rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 942px) {
+  .project h1 {
+    font-size: 4.5rem;
+    line-height: 6.5rem;
+  }
+}
+
+.project h2 {
+  margin: 0;
+}
+
+@media screen and (max-width: 954px) {
+  .project h2 {
+    font-size: 4rem;
+  }
+}
+
+.project a {
+  margin: 0 1rem 0 0;
+  background-color: #fb725b;
+  color: white;
+  text-decoration: none;
+  padding: 0.2rem;
+  border-radius: 0.4rem;
+}
+
+.project a i {
+  margin: 0 0.2rem;
+}
+
+.project .screenshots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.project .screenshots img {
+  display: block;
+  width: 80%;
+  margin: 1rem auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.2rem;
+}
+
+.notfound {
+  text-align: center;
+}
+
+.notfound h1 {
+  color: #fb725b;
+  font-size: 4rem;
+  margin: 2rem 0 0;
+}
+
+.notfound p {
+  margin: 0;
+}
+
+.notfound a {
+  display: block;
+  width: 5rem;
+  color: white;
+  text-decoration: none;
+  background-color: #fb725b;
+  padding: 0.2rem;
+  margin: 2rem auto;
+  border-radius: 0.2rem;
+}
+/*# sourceMappingURL=index.css.map */

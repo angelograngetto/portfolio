@@ -1,0 +1,440 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;700&family=Staatliches&display=swap');
+
+
+$nav: #101010;
+$bg: #111111;
+$snd: #181818;
+$thrd: #fb725b;
+$grey: #292929;
+
+$sm: 500px;
+
+  
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: $bg;
+    color: white;
+    margin: 0;
+    box-sizing: border-box;
+    &::selection{
+        background-color: $thrd;
+    }
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection{
+    background-color: $thrd;
+}
+
+b{
+    color: $thrd;
+}
+
+.container{
+    width:90%;
+    margin: auto;
+    max-width: 100rem;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100rem;
+    background-color: transparent;
+    border-bottom: 0.3rem solid $snd;
+    height: 4rem;
+    user-select: none;
+    position: relative;
+    margin: auto;
+    &__menu{
+        display: flex;
+        list-style: none;
+        height: 40%;
+        li a{
+            color: white;
+            transition: all 0.5s ease;
+            margin: 0 2rem;
+            text-decoration: none;
+            &:hover{
+                color: $thrd;
+                border-bottom: 0.2rem solid $thrd;
+            }
+        }
+        @media screen and (max-width: $sm){
+            display: none;
+        }
+    }
+    &__social{
+        display: flex;
+        list-style: none;
+        margin: 0 2rem 0 0;
+        li a{
+            color: white;
+            transition: all 0.5s ease;
+            font-size: 1.3rem;
+            margin: 0 1rem;
+            &:hover{
+                color: $thrd;
+            }
+        }
+        @media screen and (max-width: $sm){
+            margin: 0;
+        }
+    }
+
+    .btn__menu{
+        background: none;
+        border: none;
+        display: none;
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 1rem;
+        @media screen and (max-width: $sm){
+            display: block;
+        }
+    }
+
+    .btn__menu-close{
+        position: absolute;
+        font-size: 2rem;
+        top: 1rem;
+        left: 1rem;
+        z-index: 2;
+        color: white;
+        background-color: transparent;
+        border: none;
+        display: none;
+        &.active{
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+    }
+
+    &__menu-responsive{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $nav;
+        width: 100%;
+        height: 100vh;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+        display: none;
+        li{
+            text-align: center;
+            margin: 1rem 0;
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        } 
+        &.active{
+            display: flex;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            0%{
+                opacity: 0
+            }
+            100%{
+                opacity: 1
+            }
+        };
+    }
+}
+
+.home{
+    margin: auto;
+    min-height: calc(100vh - 4.5rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+    position: relative;
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1{
+            color: $thrd;
+            font-size: 5rem;
+            font-weight: bold;
+            margin: 0 0 -1rem; 
+            @media screen and (max-width:$sm){
+                font-size: 3.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+        p{
+            color: $thrd;
+            margin: 0 0 1.5rem;
+        }
+    }
+    img{
+        width: 30%;
+        height: 30%;
+        display: block;
+        margin:  0 5rem;
+        border-radius: 50%;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+        background-color: $thrd;
+        width: auto;
+        text-align: center;
+        padding: 0.5rem;
+        margin: 1rem 0;
+        border-radius: 0.3rem;
+        &:hover{
+            opacity: 0.4;
+        }
+    }
+
+    .scroll-text{
+        position: absolute;
+        text-transform: uppercase;
+        right: -5%;
+        top: 40%;
+        transform: rotate(90deg);
+        opacity: 0.4;
+    }
+
+    .translate{
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        margin: 1rem 0;
+        p{
+            color: $grey;
+            font-style: italic;
+        }
+        button{
+            border: none;
+            background: none;
+            color: lighten($snd, 10%);
+            cursor: pointer;
+            &.active{
+                color: lighten($snd, 10%);
+                color: lighten($snd, 50%);
+            }
+        }
+
+    }
+}
+
+h2{
+    font-family: 'Staatliches', cursive;
+    font-size: 15rem;
+    opacity: 0.1;
+    margin-bottom: -2rem;
+    text-transform: uppercase;
+    overflow:hidden;
+    word-wrap:break-word;
+    @media screen and (max-width: 942px){
+        font-size: 5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.about{
+    margin: auto;
+   
+    p{
+        width: 60%;
+    }
+
+    h4{
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .technologies{
+        font-size: 3rem;
+
+        i{
+            margin: 0 2rem 0 0;
+            &:hover{
+                color: $thrd;
+               
+            }
+        }
+    }
+}
+
+.projects{
+    h2{
+        text-align: right;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.project_card{
+    display: block;
+    margin: 1rem auto;
+    width: 30rem;
+    border-radius: 1rem;
+    background-color: $grey;
+    position: relative;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        object-fit: contain;
+        opacity: 0.1;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        color: white;
+        width: 100%;
+        height: 100%;
+        h4{
+            display: block;
+            text-align: center;
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: 0.6rem;
+            line-height: 3rem;
+        }
+        p{
+            display: block;
+            font-size: 1rem;
+            text-align: center;
+            margin: 0;
+        }
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+}
+
+.contact{
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        input, textarea{
+            background: none;
+            padding: 0.5rem;
+            border: 1px solid $grey;
+            color: white;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+            &:focus{
+                outline: none;
+                border: 1px solid $thrd;
+            }
+        }
+        textarea{
+            resize: none;
+        }
+        button{
+            display: block;
+            width: 40%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            background-color: $thrd;
+            border: none;
+            border-radius: 0.5rem;
+            color: white;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.project{
+    h1{
+        font-size: 15rem;
+        color: $thrd;
+        margin: 0;
+        margin-bottom: -1rem;
+        line-height: 15rem;
+        overflow: hidden;
+        @media screen and (max-width: 942px){
+            font-size: 4.5rem;
+            line-height: 6.5rem;
+        }
+    }
+    h2{
+        margin: 0;
+        @media screen and (max-width: 954px) {
+            font-size: 4rem;
+        }
+    }
+    a{
+        margin: 0 1rem 0 0;
+        background-color: $thrd;
+        color: white;
+        text-decoration: none;
+        padding: 0.2rem;
+        border-radius: 0.4rem;
+        i{
+            margin: 0 0.2rem;
+        }
+    }
+    .screenshots{
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        img{
+            display: block;
+            width: 80%;
+            margin: 1rem auto;
+            object-fit: cover;
+            border-radius: 0.2rem;
+        }
+    }
+}
+
+.notfound{
+    text-align: center;
+    h1{
+        color: $thrd;
+        font-size: 4rem;
+        margin: 2rem 0 0;
+    }
+    p{
+        margin: 0;
+    }
+    a{
+        display: block;
+        width: 5rem;
+        color: white;
+        text-decoration: none;
+        background-color: $thrd;
+        padding: 0.2rem;
+        margin: 2rem auto;
+        border-radius: 0.2rem;
+    }
+}
