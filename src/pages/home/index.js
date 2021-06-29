@@ -8,7 +8,7 @@ export default function Home(){
         <div className='container'>
             <Helmet>
                 <title>Portfolio - Angelo Grangetto</title>
-                <meta name="description" content="A Angelo Grangetto's portfolio - Fullstack developer" />
+                <meta name="description" content="A Angelo Grangetto's portfolio - Fullstack developer. You can see my projects and skills here." />
             </Helmet>
             <Banner/>
             <About/>

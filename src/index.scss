@@ -173,17 +173,36 @@ b{
             }
         };
     }
+
+    .translate{
+        display: flex;
+        flex-direction: row;
+        button{
+            border: none;
+            background: none;
+            color: lighten($snd, 10%);
+            cursor: pointer;
+            &.active{
+                color: lighten($snd, 10%);
+                color: lighten($snd, 50%);
+            }
+        }
+
+    }
 }
 
 .home{
     margin: auto;
-    min-height: calc(100vh - 4.5rem);
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap-reverse;
     position: relative;
+    @media screen and (max-width: $sm){
+        min-height: calc(100vh - 4.5rem);
+    }
     div{
         display: flex;
         flex-direction: column;
@@ -210,17 +229,57 @@ b{
         margin:  0 5rem;
         border-radius: 50%;
     }
-    a{
-        color: white;
-        text-decoration: none;
-        background-color: $thrd;
-        width: auto;
-        text-align: center;
-        padding: 0.5rem;
-        margin: 1rem 0;
-        border-radius: 0.3rem;
-        &:hover{
-            opacity: 0.4;
+    // a{
+    //     color: white;
+    //     text-decoration: none;
+    //     background-color: $thrd;
+    //     width: auto;
+    //     text-align: center;
+    //     padding: 0.5rem;
+    //     margin: 1rem 0;
+    //     border-radius: 0.3rem;
+    //     &:hover{
+    //         opacity: 0.4;
+    //     }
+    // }
+
+    .buttons-social{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        a{
+            color: white;
+            text-decoration: none;
+            background-color: transparent;
+            width: 47%;
+            text-align: center;
+            padding: 0.5rem;
+            margin: 0;
+            border-radius: 0.3rem;
+            font-size: 1.2rem;
+            transition: color 1s ease;
+            transition: background 0.5s ease;
+        }
+        .buttons-social__linkedin{
+            border: 1px solid #0E76A8;
+            color: #0E76A8;
+            &:hover{
+                background-color: #0E76A8;
+                color: white;
+            }
+        }
+        .buttons-social__github{
+            border: 1px solid #fff;
+            color: #fff;
+            &:hover{
+                background-color: #fff;
+                color: #000;
+            }
+            @media screen and (max-width: $sm){
+                margin-top: 0.5rem;
+            }
         }
     }
 
@@ -233,32 +292,14 @@ b{
         opacity: 0.4;
     }
 
-    .translate{
-        position: absolute;
-        top: 5rem;
-        left: 0;
-        display: flex;
-        flex-direction: row;
-        margin: 1rem 0;
-        z-index: 2;
-        button{
-            border: none;
-            background: none;
-            color: lighten($snd, 10%);
-            cursor: pointer;
-            &.active{
-                color: lighten($snd, 10%);
-                color: lighten($snd, 50%);
-            }
-        }
-
-    }
 }
 
 h2{
+    margin: 0;
     font-family: 'Staatliches', cursive;
     font-size: 15rem;
     opacity: 0.1;
+    margin-top: 5rem;
     margin-bottom: -2rem;
     text-transform: uppercase;
     overflow:hidden;
@@ -275,6 +316,9 @@ h2{
     p{
         width: 60%;
     }
+    h2{
+        margin-top: 0;
+    }
 
     h4{
         font-size: 2rem;
@@ -286,18 +330,11 @@ h2{
 
         i{
             margin: 0 2rem 0 0;
-            &:hover{
-                color: $thrd;
-               
-            }
         }
     }
 }
 
 .projects{
-    h2{
-        text-align: right;
-    }
     div{
         display: flex;
         flex-direction: row;
@@ -358,6 +395,7 @@ h2{
         display: flex;
         flex-direction: column;
         width: 80%;
+        max-width: 45rem;
         input, textarea{
             background: none;
             padding: 0.5rem;
@@ -369,9 +407,14 @@ h2{
                 outline: none;
                 border: 1px solid $thrd;
             }
+            font-family: 'Poppins', sans-serif;
+            &:not(:placeholder-shown):invalid{
+                border: 1px solid rgba(162, 7, 7, 0.816);
+            }
         }
         textarea{
             resize: none;
+
         }
         button{
             display: block;

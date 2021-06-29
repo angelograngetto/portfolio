@@ -1,5 +1,5 @@
 {
-    "welcome": "Hello, i'm Angelo",
+    "welcome": "Hello, I'm Angelo",
     "welcome_fullstack": "Fullstack developer",
     "download_cv": "DOWNLOAD CV",
     "navbar_home": "Home",
@@ -19,6 +19,7 @@
     "contact_your_message": "Your message",
     "contact_write_a_message": "Write me a message here",
     "contact_send": "Send",
+    "contact_required": "inputs required",
     "footer": "Whatever you do, do it with passion.",
     "notfound": "404 Not Found",
     "notfound_dont_worry": "Don't worry",

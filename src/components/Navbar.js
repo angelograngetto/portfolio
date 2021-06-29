@@ -1,7 +1,21 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
+import i18n from '../i18n'
 import { withNamespaces } from 'react-i18next';
 
 function Navbar({t}){
+
+    const [langActive, setLangActive] = useState(true)
+
+    useEffect(()=>{
+        if(localStorage.getItem('lang') === 'es') setActive(false);
+    },[])
+
+    const changeLanguage = (lng) => {
+        setLangActive(!langActive)
+        i18n.changeLanguage(lng)
+        localStorage.setItem('lang', lng)
+    }
+
 
     const [active, setActive] = useState(false)
 
@@ -18,6 +32,10 @@ function Navbar({t}){
             <ul className="navbar__social">
                 <li><a title="Linkedin" href="https://linkedin.com/in/angelo-grangetto"><i className="fab fa-linkedin"></i></a></li>
                 <li><a title="GitHub" href="https://github.com/angelograngetto"><i className="fab fa-github"></i></a></li>
+                <div className='translate'>
+                    <button onClick={() => changeLanguage('en')} className={` ${langActive ? 'active' : ''}`}>EN</button>
+                    <button onClick={() => changeLanguage('es')} className={` ${!langActive ? 'active' : ''}`}>ES</button>
+                </div>
             </ul>
 
             <ul className={`navbar__menu-responsive  ${active ? 'active' : ''}`}>
@@ -26,6 +44,7 @@ function Navbar({t}){
                 <li><a onClick={()=> setActive(false)} href="#projects">{t('navbar_projects')}</a></li>
                 <li><a onClick={()=> setActive(false)} href="#contact">{t('navbar_contact')}</a></li>
             </ul>
+            
         </nav>
         )
 }

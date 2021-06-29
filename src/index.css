@@ -234,9 +234,31 @@ b {
   }
 }
 
+.navbar .translate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.navbar .translate button {
+  border: none;
+  background: none;
+  color: #323232;
+  cursor: pointer;
+}
+
+.navbar .translate button.active {
+  color: #323232;
+  color: #989898;
+}
+
 .home {
   margin: auto;
-  min-height: calc(100vh - 4.5rem);
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,6 +274,12 @@ b {
   -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse;
   position: relative;
+}
+
+@media screen and (max-width: 500px) {
+  .home {
+    min-height: calc(100vh - 4.5rem);
+  }
 }
 
 .home div {
@@ -294,19 +322,62 @@ b {
   border-radius: 50%;
 }
 
-.home a {
-  color: white;
-  text-decoration: none;
-  background-color: #fb725b;
-  width: auto;
-  text-align: center;
-  padding: 0.5rem;
-  margin: 1rem 0;
-  border-radius: 0.3rem;
+.home .buttons-social {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.home a:hover {
-  opacity: 0.4;
+.home .buttons-social a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  width: 47%;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+  -webkit-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+.home .buttons-social .buttons-social__linkedin {
+  border: 1px solid #0E76A8;
+  color: #0E76A8;
+}
+
+.home .buttons-social .buttons-social__linkedin:hover {
+  background-color: #0E76A8;
+  color: white;
+}
+
+.home .buttons-social .buttons-social__github {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.home .buttons-social .buttons-social__github:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media screen and (max-width: 500px) {
+  .home .buttons-social .buttons-social__github {
+    margin-top: 0.5rem;
+  }
 }
 
 .home .scroll-text {
@@ -319,37 +390,12 @@ b {
   opacity: 0.4;
 }
 
-.home .translate {
-  position: absolute;
-  top: 5rem;
-  left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 1rem 0;
-  z-index: 2;
-}
-
-.home .translate button {
-  border: none;
-  background: none;
-  color: #323232;
-  cursor: pointer;
-}
-
-.home .translate button.active {
-  color: #323232;
-  color: #989898;
-}
-
 h2 {
+  margin: 0;
   font-family: 'Staatliches', cursive;
   font-size: 15rem;
   opacity: 0.1;
+  margin-top: 5rem;
   margin-bottom: -2rem;
   text-transform: uppercase;
   overflow: hidden;
@@ -371,6 +417,10 @@ h2 {
   width: 60%;
 }
 
+.about h2 {
+  margin-top: 0;
+}
+
 .about h4 {
   font-size: 2rem;
   margin: 0;
@@ -382,14 +432,6 @@ h2 {
 
 .about .technologies i {
   margin: 0 2rem 0 0;
-}
-
-.about .technologies i:hover {
-  color: #fb725b;
-}
-
-.projects h2 {
-  text-align: right;
 }
 
 .projects div {
@@ -475,6 +517,7 @@ h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 80%;
+  max-width: 45rem;
 }
 
 .contact form input, .contact form textarea {
@@ -484,11 +527,16 @@ h2 {
   color: white;
   border-radius: 0.5rem;
   margin: 1rem 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .contact form input:focus, .contact form textarea:focus {
   outline: none;
   border: 1px solid #fb725b;
+}
+
+.contact form input:not(:placeholder-shown):invalid, .contact form textarea:not(:placeholder-shown):invalid {
+  border: 1px solid rgba(162, 7, 7, 0.816);
 }
 
 .contact form textarea {

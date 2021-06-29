@@ -13,6 +13,7 @@ function Project({params, t}){
         pushLocation('/404')
     }
     const {title, large_description, demo, github, technologies, images} = project[0]
+    const lang = localStorage.getItem('lang');
 
     window.scrollTo( 0, 0 );
 
@@ -26,7 +27,7 @@ function Project({params, t}){
                 <h1>{title}</h1>
                 <a href={demo} rel='noreferrer' target='_blank'><i className="fas fa-globe"></i>{t('projects_visit_site')}</a>
                 <a href={github} rel='noreferrer' target='_blank'><i className="fab fa-github"></i>GitHub</a>
-                <p>{large_description}</p>
+                <p>{lang === 'en' ? large_description[0] : large_description[1]}</p>
                 <h3>{t('projects_tech')}</h3>
                 <p>{technologies}</p>
                 <h2>Screenshots</h2>
