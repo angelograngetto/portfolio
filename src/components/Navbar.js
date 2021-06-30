@@ -7,7 +7,7 @@ function Navbar({t}){
     const [langActive, setLangActive] = useState(true)
 
     useEffect(()=>{
-        if(localStorage.getItem('lang') === 'es') setActive(false);
+        if(localStorage.getItem('lang') === 'es') setLangActive(false);
     },[])
 
     const changeLanguage = (lng) => {
@@ -25,9 +25,9 @@ function Navbar({t}){
             <button onClick={()=> setActive(false)} className={`btn__menu-close  ${active ? 'active' : ''}`}><i className="fas fa-times"></i></button>
             <ul className="navbar__menu">
                 <li><a href="/">{t('navbar_home')}</a></li>
-                <li><a href="#about">{t('navbar_about')}</a></li>
-                <li><a href="#projects">{t('navbar_projects')}</a></li>
-                <li><a href="#contact">{t('navbar_contact')}</a></li>
+                <li><a href="/#about">{t('navbar_about')}</a></li>
+                <li><a href="/#projects">{t('navbar_projects')}</a></li>
+                <li><a href="/#contact">{t('navbar_contact')}</a></li>
             </ul>
             <ul className="navbar__social">
                 <li><a title="Linkedin" href="https://linkedin.com/in/angelo-grangetto"><i className="fab fa-linkedin"></i></a></li>
@@ -40,9 +40,9 @@ function Navbar({t}){
 
             <ul className={`navbar__menu-responsive  ${active ? 'active' : ''}`}>
                 <li><a onClick={()=> setActive(false)} href="/">{t('navbar_home')}</a></li>
-                <li><a onClick={()=> setActive(false)} href="#about">{t('navbar_about')}</a></li>
-                <li><a onClick={()=> setActive(false)} href="#projects">{t('navbar_projects')}</a></li>
-                <li><a onClick={()=> setActive(false)} href="#contact">{t('navbar_contact')}</a></li>
+                <li><a onClick={()=> setActive(false)} href="/#about">{t('navbar_about')}</a></li>
+                <li><a onClick={()=> setActive(false)} href="/#projects">{t('navbar_projects')}</a></li>
+                <li><a onClick={()=> setActive(false)} href="/#contact">{t('navbar_contact')}</a></li>
             </ul>
             
         </nav>

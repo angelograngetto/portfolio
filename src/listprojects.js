@@ -12,29 +12,28 @@ const listprojects = [
         images: [
             "https://i.imgur.com/kmvQb0V.png",
             "https://i.imgur.com/XnsFDyq.png",
-            "https://i.imgur.com/mUJDVS5.png",
-            "https://i.imgur.com/62qxcLn.png"
+            "https://i.imgur.com/mUJDVS5.png"
         ],
         demo: "https://gifsreact.vercel.app",
         github: "https://github.com/angelograngetto/rifs"
     },
     {
-        id: 'weather-app',
-        title: "WEATHER APP",
-        short_description: "Weather web app",
+        id: 'tuita',
+        title: "TUITA",
+        short_description: "Tuita",
         large_description: [
-            "Is a weather web application where you can search your city and check actually weather. Works with OpenWeather API.",
-            "Es una aplicación web de meteorología donde puedes buscar tu ciudad y consultar el clima actual. Funciona con la API de OpenWeather."
+            "Is a functional Twitter clone made with NextJs and Firebase. You can login into the app with your github account and make 'tuits' (tweets). Also you can upload images! The styling is based on Twitter and Mobile Only using style jsx.",
+            "Es un clon de Twitter funcional. Utiliza React con NextJS y para el guardado de datos Firebase. Puedes loguearte utilizando tu cuenta de GitHub y realizar un tuit (tweet). Además puedes subir una imágen. El estilo fue dado en base a Twitter y con el formato Mobile Only utilizando style jsx."
         ],
-        technologies: "React - OpenWeather API",
+        technologies: "React - NextJS - Firebase",
         images: [
-            "https://angelograngetto.abtecstudio.com.ar/assets/weather1.png",
-            "https://angelograngetto.abtecstudio.com.ar/assets/weather2.png",
-            "https://angelograngetto.abtecstudio.com.ar/assets/weather3.png",
-            "https://angelograngetto.abtecstudio.com.ar/assets/weather4.png"
+            "https://i.imgur.com/EVJOnSC.png",
+            "https://i.imgur.com/ghTe6Et.png",
+            "https://i.imgur.com/JaPHT7N.png",
+            "https://i.imgur.com/6mcGF1U.png"
         ],
-        demo: "https://angelograngetto.abtecstudio.com.ar/weather/",
-        github: "https://github.com/angelograngetto/weatherapp"
+        demo: "https://tuita.vercel.app/",
+        github: "https://github.com/angelograngetto/tuita"
     },
 ]
 

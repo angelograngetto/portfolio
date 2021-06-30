@@ -13,6 +13,24 @@ function About({t}){
                 <i title="Python / DJango" className="fab fa-python"></i>
                 <i title="NodeJS" className="fab fa-node-js"></i>
             </div>
+            <h4>{t('about_ed')}</h4>
+            <ul>
+                <li>
+                    Fullstack Python - Digitalers Telecom & EducacionIT
+                    <br />
+                    <small>2021</small>
+                </li>
+                <li>
+                    {t('about_sass')} - EducacionIT
+                    <br />
+                    <small>2021</small>
+                </li>
+                <li>
+                    {t('about_eng')} - UTN FRVM
+                    <br />
+                    <small>2017-2018</small>
+                </li>
+            </ul>
         </div>
     )
 }
