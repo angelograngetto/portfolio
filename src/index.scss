@@ -215,7 +215,6 @@ b{
             margin: 0 0 -1rem; 
             @media screen and (max-width:$sm){
                 font-size: 3.5rem;
-                margin-bottom: 1rem;
             }
         }
         p{
@@ -249,12 +248,11 @@ b{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         a{
             color: white;
             text-decoration: none;
             background-color: transparent;
-            width: 47%;
             text-align: center;
             padding: 0.5rem;
             margin: 0;
@@ -262,24 +260,11 @@ b{
             font-size: 1.2rem;
             transition: color 1s ease;
             transition: background 0.5s ease;
-        }
-        .buttons-social__linkedin{
-            border: 1px solid #0E76A8;
-            color: #0E76A8;
+            border: 1px solid white;
+            margin: 0 1rem 0 0;
+            padding: 0.4rem 0.8rem;
             &:hover{
-                background-color: #0E76A8;
-                color: white;
-            }
-        }
-        .buttons-social__github{
-            border: 1px solid #fff;
-            color: #fff;
-            &:hover{
-                background-color: #fff;
-                color: #000;
-            }
-            @media screen and (max-width: $sm){
-                margin-top: 0.5rem;
+                opacity: 0.6;
             }
         }
     }

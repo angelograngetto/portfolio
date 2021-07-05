@@ -11,8 +11,22 @@ function Banner({t}){
             <p>{t('welcome_fullstack')} 🤗</p>
             {/* <a href="#">{t('download_cv')}</a> */}
             <div className="buttons-social">
-                <a href="https://linkedin.com/in/angelo-grangetto" className="buttons-social__linkedin"><i className="fab fa-linkedin"></i> Linkedin</a>
-                <a href="https://github.com/angelograngetto" className="buttons-social__github"><i className="fab fa-github"></i> GitHub</a>
+                <a 
+                    title="LinkedIn" 
+                    href="https://linkedin.com/in/angelo-grangetto"
+                    target="_blank"
+                    rel="noreferrer" 
+                    className="buttons-social__linkedin">
+                        <i className="fab fa-linkedin"></i>
+                </a>
+                <a 
+                    title="GitHub" 
+                    href="https://github.com/angelograngetto"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="buttons-social__github">
+                        <i className="fab fa-github"></i>
+                </a>
             </div>
         </div>
         <img src="assets/img/me.png" alt="me" />

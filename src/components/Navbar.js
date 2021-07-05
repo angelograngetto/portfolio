@@ -30,8 +30,8 @@ function Navbar({t}){
                 <li><a href="/#contact">{t('navbar_contact')}</a></li>
             </ul>
             <ul className="navbar__social">
-                <li><a title="Linkedin" href="https://linkedin.com/in/angelo-grangetto"><i className="fab fa-linkedin"></i></a></li>
-                <li><a title="GitHub" href="https://github.com/angelograngetto"><i className="fab fa-github"></i></a></li>
+                <li><a title="Linkedin" href="https://linkedin.com/in/angelo-grangetto" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a></li>
+                <li><a title="GitHub" href="https://github.com/angelograngetto" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a></li>
                 <div className='translate'>
                     <button onClick={() => changeLanguage('en')} className={` ${langActive ? 'active' : ''}`}>EN</button>
                     <button onClick={() => changeLanguage('es')} className={` ${!langActive ? 'active' : ''}`}>ES</button>
