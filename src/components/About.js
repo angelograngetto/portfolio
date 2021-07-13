@@ -16,7 +16,7 @@ function About({t}){
             <h4>{t('about_ed')}</h4>
             <ul>
                 <li>
-                    Fullstack Python - Digitalers Telecom & EducacionIT
+                    Bootcamp Fullstack Python - Digitalers Telecom & EducacionIT
                     <br />
                     <small>2021</small>
                 </li>
