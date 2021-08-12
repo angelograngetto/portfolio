@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #111111;
   color: white;
   margin: 0;
@@ -372,7 +372,7 @@ b {
 
 h2 {
   margin: 0;
-  font-family: 'Staatliches', cursive;
+  font-family: "Staatliches", cursive;
   font-size: 15rem;
   opacity: 0.1;
   margin-top: 5rem;
@@ -410,10 +410,6 @@ h2 {
 .about .technologies {
   font-size: 3rem;
   margin-bottom: 1rem;
-}
-
-.about .technologies i {
-  margin: 0 2rem 0 0;
 }
 
 .about ul {
@@ -519,22 +515,25 @@ h2 {
   max-width: 45rem;
 }
 
-.contact form input, .contact form textarea {
+.contact form input,
+.contact form textarea {
   background: none;
   padding: 0.5rem;
   border: 1px solid #292929;
   color: white;
   border-radius: 0.5rem;
   margin: 1rem 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.contact form input:focus, .contact form textarea:focus {
+.contact form input:focus,
+.contact form textarea:focus {
   outline: none;
   border: 1px solid #fb725b;
 }
 
-.contact form input:not(:placeholder-shown):invalid, .contact form textarea:not(:placeholder-shown):invalid {
+.contact form input:not(:placeholder-shown):invalid,
+.contact form textarea:not(:placeholder-shown):invalid {
   border: 1px solid rgba(162, 7, 7, 0.816);
 }
 

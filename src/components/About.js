@@ -6,24 +6,29 @@ function About({t}){
             <p>{t('about_p')}</p>
             <h4>{t('about_tech')}</h4>
             <div className="technologies">
-                <i title="JavaScript" className="fab fa-js-square"></i>
-                <i title="React" className="fab fa-react"></i>
-                <i title="CSS3" className="fab fa-css3-alt"></i>
-                <i title="SASS" className="fab fa-sass"></i>
-                <i title="Python / DJango" className="fab fa-python"></i>
-                <i title="NodeJS" className="fab fa-node-js"></i>
+                <i title="JavaScript" className="fab fa-js-square"></i>  &nbsp;
+                <i title="React" className="fab fa-react"></i> &nbsp;
+                <i title="CSS3" className="fab fa-css3-alt"></i> &nbsp;
+                <i title="SASS" className="fab fa-sass"></i> &nbsp;
+                <i title="Python / DJango" className="fab fa-python"></i> &nbsp;
+                <i title="NodeJS" className="fab fa-node-js"></i> &nbsp;
             </div>
             <h4>{t('about_ed')}</h4>
             <ul>
+                <li>
+                    {t('about_alkemy')} - Alkemy
+                    <br />
+                    <small>2021</small>
+                </li>
                 <li>
                     Bootcamp Fullstack Python - Digitalers Telecom & EducacionIT
                     <br />
                     <small>2021</small>
                 </li>
                 <li>
-                    {t('about_sass')} - EducacionIT
+                    {t('about_mechatronics')} - UTN FRVM
                     <br />
-                    <small>2021</small>
+                    <small>2019-2021</small>
                 </li>
                 <li>
                     {t('about_eng')} - UTN FRVM
